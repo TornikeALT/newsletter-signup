@@ -1,0 +1,262 @@
+body {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--CharcoalGrey);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: robotoRegular;
+  src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: robotoBold;
+  src: url('./fonts/Roboto-Bold.ttf');
+}
+
+.container {
+  max-width: 1200px;
+  margin: 15rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--White);
+  border-radius: 2rem;
+  gap: 10px;
+  max-width: 55rem;
+  padding: 1.5rem
+}
+
+.content {
+  margin-top: 4rem;
+  max-width: 25rem;
+  padding-left: 2.5rem;
+}
+
+.content p {
+  font-family: robotoRegular;
+}
+
+ul li>span {
+  color: var(--DarkSlateGrey);
+  font-family: robotoRegular;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  color: var(--DarkSlateGrey);
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.service {
+  display: flex;
+  gap: 1rem;
+}
+
+form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 2rem;
+}
+
+label {
+  color: var(--CharcoalGrey);
+  font-family: robotoBold;
+  font-size: 13px;
+}
+
+input {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  font-size: 15px;
+  font-family: robotoRegular;
+}
+
+
+.subscribe_btn {
+  margin-top: 1rem;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--CharcoalGrey);
+  border: none;
+  color: var(--White);
+  font-size: 15px;
+  font-family: robotoRegular;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email_and_error_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  border: 1px solid var(--Tomato);
+  background-color: rgb(240, 222, 225);
+  color: var(--Tomato);
+  font-family: robotoBold;
+}
+
+
+.error_title {
+  color: var(--Tomato);
+  font-size: 13px;
+  font-family: robotoRegular;
+  font-weight: 500;
+}
+
+.subscribe_btn:hover {
+  background-color: var(--DarkSlateGrey);
+}
+
+.modal {
+  max-width: 25rem;
+  width: 100%;
+  background-color: var(--White);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 6rem 4rem;
+  line-height: 1.5rem;
+  font-family: robotoRegular;
+  color: var(--DarkSlateGrey);
+  gap: 2rem;
+}
+
+.modal h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-family: robotoBold;
+  color: var(--DarkSlateGrey);
+}
+
+.modal_icon {
+  width: 4rem;
+}
+
+.dismiss_btn {
+  width: 100%;
+  background-color: var(--DarkSlateGrey);
+  padding: 1rem 0;
+  color: var(--White);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: robotoBold;
+}
+
+.none {
+  display: none;
+}
+
+.dismiss_btn:hover {
+  background-color: var(--CharcoalGrey);
+}
+
+@media only screen and (max-width:896px) {
+
+
+  .image_container img {
+    min-height: 60vh;
+    width: 100%;
+  }
+
+  .service img {
+    width: 14px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .image_container {
+    background: var(--Tomato);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: unset;
+    padding: 1rem;
+  }
+
+  .wrapper {
+    padding: 0 0 1rem 0;
+  }
+
+  form {
+    padding-right: unset;
+  }
+}
+
+@media only screen and (max-width:470px) {
+  .image_container img {
+    min-height: unset;
+  }
+
+  .modal {
+    border-radius: unset;
+  }
+}
+
+@media only screen and (max-width:410px) {
+  .modal_icon {
+    width: 3rem;
+  }
+
+  .modal h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
